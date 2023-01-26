@@ -8,7 +8,7 @@
 
 # Opis projekta
 ## Kratki opis
-Ovdje ide opis projekta
+Ideja je izraditi aplikaciju za dostavu hrane. Korisik će ulaskom na aplikaciju moći vidjeti popis restorana, moći će pretraživati restorane. Odabirom na određeni restoran korisnika se vodi na drugu stranicu koja sadrži sva jela u odabranom restoranu, a odabirom na jelo korisnika vodi na narudžbu jela i završni korak potvrde narudžbe.
 
 ## Popis funkcionalnosti
 1. a
