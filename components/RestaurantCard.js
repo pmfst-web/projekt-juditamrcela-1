@@ -1,32 +1,21 @@
 import react from 'react'
 import {View,Text,StyleSheet,TouchableOpacity,Image} from 'react-native'
 
-const RestaurantCard = ({
-  id,
-  image,
-  title,
-  rating,
-  genre,
-  address,
-  short_description,
-  dishes,
-  long,
-  lat,
-}) => {
+const RestaurantCard = (podaci) => {
   return (
     <TouchableOpacity style={styles.touchable}>
       <Image
       source={{
-        uri:image
+        uri:podaci.item.image
       }}
       style={styles.image}/>
       <View style={styles.wrap}>
-        <Text style={styles.text}>{title} </Text>
+        <Text style={styles.text}>{podaci.item.title} </Text>
         <View style={styles.wrapper}>
-          <Text style={styles.descriptionText}>{rating} {genre}</Text>
+          <Text style={styles.descriptionText}>{podaci.item.rating} {podaci.item.genre}</Text>
         </View>
         <View style={styles.wrapper}>
-          <Text style={styles.descriptionText}>Nearby {address}</Text>
+          <Text style={styles.descriptionText}>Nearby {podaci.item.address}</Text>
         </View>
         
       </View>

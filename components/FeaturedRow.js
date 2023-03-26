@@ -1,6 +1,7 @@
 import react from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image,ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image,ScrollView, FlatList } from 'react-native';
 import RestaurantCard from './RestaurantCard'
+import { RESTAURANTS } from '../data/pocetni';
 
 const FeaturedRow = (podaci) => {
   return (
@@ -11,30 +12,8 @@ const FeaturedRow = (podaci) => {
     <Text style={styles.descriptionText}>{podaci.item.description}</Text>
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollView}>
       {/*Restaurant Card*/}
-      <RestaurantCard  
-      id={123}
-      image="https://links.papareact.com/gn7"
-      title="Sushi bar"
-      rating={3.7}
-      genre="Japanese"
-      address="Marka marulica 66"
-      short_description="Amazing sushi food"
-      dishes={[]}
-      long={20}
-      lat={0}
-      />
-      <RestaurantCard  
-      id={123}
-      image="https://links.papareact.com/gn7"
-      title="Sushi bar"
-      rating={3.7}
-      genre="Japanese"
-      address="Marka marulica 66"
-      short_description="Amazing sushi food"
-      dishes={[]}
-      long={20}
-      lat={0}
-      />
+      <FlatList horizontal='true' data={RESTAURANTS} renderItem={RestaurantCard}/>
+      
     </ScrollView>
       
     </View>

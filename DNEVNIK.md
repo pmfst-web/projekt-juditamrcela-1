@@ -7,6 +7,10 @@ hh:mm   | hh:mm
 Definirani zahtjevi aplikacije.
 Dovršena prva faza projekta.
 
-## 23.12.2021.
+## 26.03.2023
+
+Pocetak | Kraj
+------- | ----
+14:30   | 19:30
 ### Kratki opis promjena
-Napravio sam navigaciju
+Napravljen frontend homescreen-a i napravljeni osnovni pocetni podaci i modeli
