@@ -14,3 +14,9 @@ Pocetak | Kraj
 14:30   | 19:30
 ### Kratki opis promjena
 Napravljen frontend homescreen-a i napravljeni osnovni pocetni podaci i modeli
+
+Pocetak | Kraj
+------- | ----
+16:00   | 19:30
+### Kratki opis promjena
+Poceno redux i osnovne operacije

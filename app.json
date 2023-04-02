@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "projekt-template",
-    "slug": "projekt-template",
+    "name": "hot-watermelon",
+    "slug": "snack-393570ae-731b-4a0b-8ea6-15b2682af4d5",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

@@ -3,7 +3,11 @@ import { Text, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from "./Screens/HomeScreen"
+import HomeScreen from "./Screens/HomeScreen";
+import { Provider } from 'react-redux';
+import RestaurantDetail from "./Screens/RestaurantDetail";
+
+import store from './store/reducers/store';
 
 
 // You can import from local files
@@ -14,12 +18,14 @@ import { Card } from 'react-native-paper';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <NavigationContainer>
-     <Stack.Navigator>
-     <Stack.Screen name="Home" component={HomeScreen}/>
-     
-     </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+      <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomeScreen}/>
+      <Stack.Screen name='Details' component={RestaurantDetail}/>
+      </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
 
