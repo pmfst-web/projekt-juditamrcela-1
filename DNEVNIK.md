@@ -20,3 +20,9 @@ Pocetak | Kraj
 16:00   | 19:30
 ### Kratki opis promjena
 Poceno redux i osnovne operacije
+## 16.04.2023
+Pocetak | Kraj
+------- | ----
+16:30   | 20:15
+### Kratki opis promjena
+Dodan page detail screen i slike

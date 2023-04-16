@@ -6,9 +6,9 @@ const RestaurantCard = (props) => {
   const navigation = useNavigation();
   console.log(props.podaci, 'props podaci');
   const onDetails = (id) => {
-    console.log('tuu', props.podaci.item.id);
-    navigation.navigate('Details', { id });
-    console.log('tamo');
+    
+    navigation.navigate('Restaurant Details', { id });
+    
   };
   return (
     <TouchableOpacity

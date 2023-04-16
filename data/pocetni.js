@@ -12,6 +12,7 @@ export const RESTAURANTS = [
     [
       {
         id: 0,
+        image: 'https://links.papareact.com/gn7',
         name: 'jelo1',
         description: 'opis',
         price: 20,
@@ -19,6 +20,7 @@ export const RESTAURANTS = [
       {
         id: 1,
         name: 'jelo2',
+        image:'https://links.papareact.com/gn7',
         description: 'opis2',
         price: 10,
       },
@@ -28,7 +30,7 @@ export const RESTAURANTS = [
   ),
   new Restaurant(
     1,
-    'https://links.papareact.com/gn7',
+    'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/621878f799574aeeab7e91db7b6cd53e',
     'Pizza place',
     4.0,
     'Pizza',
@@ -38,12 +40,14 @@ export const RESTAURANTS = [
       {
         id: 0,
         name: 'jelo1',
+        image:'https://links.papareact.com/gn7',
         description: 'opis',
         price: 20,
       },
       {
         id: 1,
         name: 'jelo2',
+        image:'https://links.papareact.com/gn7',
         description: 'opis2',
         price: 10,
       },
@@ -53,8 +57,8 @@ export const RESTAURANTS = [
   ),
   new Restaurant(
     2,
-    'https://links.papareact.com/gn7',
-    'Fish and chips',
+    'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/87c777704dd2a5b0e6f642b313d6f937',
+    'Pasta',
     3.5,
     'Fish',
     'Rudera Boskovica 33',
@@ -63,12 +67,14 @@ export const RESTAURANTS = [
       {
         id: 0,
         name: 'jelo1',
+        image:'https://links.papareact.com/gn7',
         description: 'opis',
         price: 20,
       },
       {
         id: 1,
         name: 'jelo2',
+        image:'https://links.papareact.com/gn7',
         description: 'opis2',
         price: 10,
       },
@@ -78,7 +84,7 @@ export const RESTAURANTS = [
   ),
   new Restaurant(
     3,
-    'https://links.papareact.com/gn7',
+    'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/7630664457becf283187830a9b0be4de',
     'Burger bar',
     4.3,
     'Burgers',
@@ -89,11 +95,13 @@ export const RESTAURANTS = [
         id: 0,
         name: 'jelo1',
         description: 'opis',
+        image:'https://links.papareact.com/gn7',
         price: 20,
       },
       {
         id: 1,
         name: 'jelo2',
+        image:'https://links.papareact.com/gn7',
         description: 'opis2',
         price: 10,
       },

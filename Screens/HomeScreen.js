@@ -21,11 +21,7 @@ const HomeScreen = ({ navigation }) => {
   console.log(featured, 'aa');
   console.log(restorani, 'bb');
   const [featuredRow, setFeaturedRow] = useState([]);
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerShown: false,
-    });
-  });
+  
   return (
     <View style={styles.wrap}>
       {/*Header*/}

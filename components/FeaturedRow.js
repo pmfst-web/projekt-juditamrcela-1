@@ -16,7 +16,7 @@ const FeaturedRow = (props) => {
     <Text style={styles.descriptionText}>{props.podaci.item.description}</Text>
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollView}>
       {/*Restaurant Card*/}
-      <FlatList horizontal='true' data={restorani} renderItem={(item)=>(
+      <FlatList horizontal={true} data={restorani} renderItem={(item)=>(
         <RestaurantCard podaci={item}/>
       )}/>
       

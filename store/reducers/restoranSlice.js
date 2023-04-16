@@ -63,6 +63,6 @@ const restaurantSlice=createSlice({
 
 
 
-export const {addToOrder,increment,decrement,removeDish}=restaurantSlice.actions
+export const {addToOrder,increment,decrement}=restaurantSlice.actions
 
 export default restaurantSlice.reducer
