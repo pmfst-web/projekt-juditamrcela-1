@@ -3,6 +3,8 @@ import { View, Text, StyleSheet,FlatList,ScrollView,Image } from 'react-native';
 import {useSelector,useDispatch} from 'react-redux';
 import {addToOrder} from '../store/reducers/restoranSlice'
 import DishCard from '../components/DishCard'
+import BasketPopUp from '../components/BasketPopUp'
+
 const RestaurantDetail = ({route,navigation}) => {
   const idRestoran=route.params?.id;
   console.log(idRestoran)
@@ -16,40 +18,47 @@ const RestaurantDetail = ({route,navigation}) => {
   const handleToOrder=(jelo)=>{
     dispatch(addToOrder(jelo))
   }
+  const handleIncrement=(id)=>{
+    dispatch(increment(id))
+  }
 
   return (
-    <ScrollView>
-      <View>
-        <Image
-        source={{
-          uri:restoran.image,
-        }}
-        style={styles.image}
-        />
-      </View>
-      <View style={{backgroundColor:'white'}}>
-        <View style={styles.wrap}>
-          <Text style={styles.text}>{restoran.title} </Text>
-          <View style={styles.wrapper}>
-            <Text style={styles.descriptionText} >Nearby {restoran.address}</Text>
-          </View>
-          <Text style={styles.descriptionText}>{restoran.short_description}</Text>
+    <> 
+      <BasketPopUp/>
+      <ScrollView>
+        <View>
+          <Image
+          source={{
+            uri:restoran.image,
+          }}
+          style={styles.image}
+          />
         </View>
-        
-        
-      </View>
-      <View>
-        <Text style={{	
-              paddingHorizontal: 16,
-              paddingTop: 24,
-              marginBottom: 12,
-              fontSize: 20,
-              fontWeight: 'bold' }}>Menu</Text>
-        <FlatList  data={jela} renderItem={(item)=>(
-          <DishCard podaci={item}/>
-        )}/>
-      </View>
-    </ScrollView>
+        <View style={{backgroundColor:'white'}}>
+          <View style={styles.wrap}>
+            <Text style={styles.text}>{restoran.title} </Text>
+            <View style={styles.wrapper}>
+              <Text style={styles.descriptionText} >Nearby {restoran.address}</Text>
+            </View>
+            <Text style={styles.descriptionText}>{restoran.short_description}</Text>
+          </View>
+          
+          
+        </View>
+        <View style={{paddingBottom:160}}>
+          <Text style={{	
+                paddingHorizontal: 16,
+                paddingTop: 24,
+                marginBottom: 12,
+                fontSize: 20,
+                fontWeight: 'bold',
+                 }}>Menu</Text>
+          <FlatList  data={jela} renderItem={(item)=>(
+            <DishCard podaci={item}/>
+          )}/>
+        </View>
+      </ScrollView>
+    </>
   );
 };
 const styles = StyleSheet.create({

@@ -26,3 +26,10 @@ Pocetak | Kraj
 16:30   | 20:15
 ### Kratki opis promjena
 Dodan page detail screen i slike
+
+## 23.04.2023
+Pocetak | Kraj
+------- | ----
+17:30   | 20:00
+### Kratki opis promjena
+Dodane akcije addToBasket i remove.Napravljena basketPopUp komponenta

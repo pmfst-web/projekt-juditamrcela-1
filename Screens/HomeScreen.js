@@ -48,7 +48,7 @@ const HomeScreen = ({ navigation }) => {
         <Categories />
 
         {/*Prikaz restorana*/}
-        <FlatList
+        <FlatList style={{paddingBottom:50}}
           data={featured}
           renderItem={(item) => <FeaturedRow podaci={item} />}
         />

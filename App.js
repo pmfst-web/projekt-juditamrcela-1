@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import { Provider } from 'react-redux';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
 import HomeScreen from "./Screens/HomeScreen";
-import { Provider } from 'react-redux';
+import BasketScreen from './Screens/BasketScreen';
 import RestaurantDetail from "./Screens/RestaurantDetail";
 
 import store from './store/reducers/store';
@@ -23,6 +26,7 @@ export default function App() {
       <Stack.Navigator>
       <Stack.Screen name="Home" component={HomeScreen}/>
       <Stack.Screen name='Restaurant Details' component={RestaurantDetail}/>
+      <Stack.Screen name='Basket' component={BasketScreen}/>
       </Stack.Navigator>
       </NavigationContainer>
     </Provider>
