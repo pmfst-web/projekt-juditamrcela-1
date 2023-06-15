@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from "./Screens/HomeScreen";
 import BasketScreen from './Screens/BasketScreen';
 import RestaurantDetail from "./Screens/RestaurantDetail";
+import OrderScreen from "./Screens/OrderScreen";
 
 import store from './store/reducers/store';
 
@@ -27,6 +28,7 @@ export default function App() {
       <Stack.Screen name="Home" component={HomeScreen}/>
       <Stack.Screen name='Restaurant Details' component={RestaurantDetail}/>
       <Stack.Screen name='Basket' component={BasketScreen}/>
+      <Stack.Screen name='Order' component={OrderScreen} options={{ headerShown: false}}/>
       </Stack.Navigator>
       </NavigationContainer>
     </Provider>

@@ -4,6 +4,7 @@ import {useSelector,useDispatch} from 'react-redux';
 import {addToOrder} from '../store/reducers/restoranSlice'
 import DishCard from '../components/DishCard'
 import BasketPopUp from '../components/BasketPopUp'
+import { t } from 'react-native-tailwindcss';
 
 const RestaurantDetail = ({route,navigation}) => {
   const idRestoran=route.params?.id;
@@ -14,13 +15,6 @@ const RestaurantDetail = ({route,navigation}) => {
   console.log(jela,"jela")
 
   const dispatch=useDispatch();
-
-  const handleToOrder=(jelo)=>{
-    dispatch(addToOrder(jelo))
-  }
-  const handleIncrement=(id)=>{
-    dispatch(increment(id))
-  }
 
   return (
     <> 

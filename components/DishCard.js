@@ -16,15 +16,12 @@ const DishCard = (props) => {
   const [isPressed, setIsPressed] = useState(false);
   const basket = useSelector((state) => state.restoran.kosarica);
   const total=basket.reduce((total,item)=>total+=item.price,0)
-  console.log(basket,"kosara")
-  console.log("ukupno:",total)
   const jeloJedno = basket.filter((jelo) => jelo.id === props.podaci.item.id);
-  console.log('jelo', jeloJedno);
+  
 
   const dispatch = useDispatch();
   const handleDecrement = () => {
     if (!jeloJedno.length > 0) return;
-    console.log("uslo")
     dispatch(removeDish(props.podaci.item));
    
     
@@ -63,7 +60,7 @@ const DishCard = (props) => {
         </View>
       </TouchableOpacity>
       {isPressed && (
-        <View style={{ backgroundColor: 'white', paddingHorizontal: 16 }}>
+        <View style={{ backgroundColor: 'white', paddingHorizontal: 16,marginRight:12 }}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <TouchableOpacity onPress={handleToOrder}>
               <Ionicons

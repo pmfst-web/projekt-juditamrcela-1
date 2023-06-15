@@ -24,7 +24,7 @@ const restaurantSlice = createSlice({
       const jeloDel = state.kosarica.findIndex(
         (jelo) => jelo.id === action.payload.id
       );
-      console.log('Jelo index');
+      
       let kopijaKosarica = [...state.kosarica];
       if (jeloDel >= 0) {
         kopijaKosarica.splice(jeloDel, 1);

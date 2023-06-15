@@ -10,17 +10,30 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import Categories from '../components/Categories';
 import FeaturedRow from '../components/FeaturedRow';
-import { RESTAURANTS } from '../data/pocetni';
-import { FEATURED } from '../data/featuredData';
 
+import RestaurantCard from '../components/RestaurantCard';
 import { useSelector } from 'react-redux';
 import { getRest } from '../store/reducers/restoranSlice';
 const HomeScreen = ({ navigation }) => {
   const restorani = useSelector((state) => state.restoran.restaurants);
   const featured = useSelector((state) => state.restoran.featured);
-  console.log(featured, 'aa');
-  console.log(restorani, 'bb');
-  const [featuredRow, setFeaturedRow] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [flag,setFlag]=useState(false);
+ 
+  const handleFilter=(text)=>{
+       if(text){  
+            setFlag(true)
+            const newData = restorani.filter(item => {
+                const itemData = item.title ? item.title.toUpperCase() : ''.toUpperCase();
+                const textData = text.toUpperCase();
+                return itemData.indexOf(textData) > -1;
+            })
+            setFilteredData(newData);
+        } else {
+            setFilteredData(restorani);
+            setFlag(false)
+        }
+  }
   
   return (
     <View style={styles.wrap}>
@@ -39,6 +52,8 @@ const HomeScreen = ({ navigation }) => {
             placeholder="Search restaurants"
             keyboardType="default"
             style={styles.text_input}
+            onChangeText={(text) => handleFilter(text)}
+         
           />
         </View>
       </View>
@@ -46,12 +61,17 @@ const HomeScreen = ({ navigation }) => {
       <ScrollView style={styles.scrollViewWrap}>
         {/*Kategorije po jelu*/}
         <Categories />
-
-        {/*Prikaz restorana*/}
+        {flag ? 
+        <FlatList data={filteredData} renderItem={(item)=>(
+        <RestaurantCard podaci={item}/>
+      )}/>: 
+        
         <FlatList style={{paddingBottom:50}}
           data={featured}
           renderItem={(item) => <FeaturedRow podaci={item} />}
-        />
+        />}
+       
+        
       </ScrollView>
     </View>
   );

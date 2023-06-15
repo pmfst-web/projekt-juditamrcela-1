@@ -33,3 +33,9 @@ Pocetak | Kraj
 17:30   | 20:00
 ### Kratki opis promjena
 Dodane akcije addToBasket i remove.Napravljena basketPopUp komponenta
+## 15.06.2023
+Pocetak | Kraj
+------- | ----
+14:30   | 18:30
+### Kratki opis promjena
+Ispravak fronted bug-a, dodana završni screen i filtriranje.

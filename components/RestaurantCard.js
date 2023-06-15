@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const RestaurantCard = (props) => {
   const navigation = useNavigation();
-  console.log(props.podaci, 'props podaci');
+  
   const onDetails = (id) => {
     
     navigation.navigate('Restaurant Details', { id });

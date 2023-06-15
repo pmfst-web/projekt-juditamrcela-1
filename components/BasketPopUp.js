@@ -12,22 +12,23 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addToOrder, removeDish } from '../store/reducers/restoranSlice';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-const BasketPopUp = (props) => {
+const BasketPopUp = () => {
   
   const basket=useSelector((state)=>state.restoran.kosarica)
   const ukupno=basket.reduce((total,item)=>total+=item.price,0)
-  console.log("props",props)
+  
   const navigation=useNavigation()
   console.log("kosara",basket)
-   const handleNavigation = (id) => {
+   const handleNavigation = (basket) => {
     
-    navigation.navigate('Basket', { id });
+    navigation.navigate('Basket');
   
   };
+  if(basket.length===0) return null;
 
   return (
     <View style={styles.wrap}>
-      <TouchableOpacity onPress={()=>navigation.navigate("Basket")} style={styles.touchable}>
+      <TouchableOpacity onPress={()=>handleNavigation(basket)} style={styles.touchable}>
         <Text style={styles.text}>{basket.length}</Text>
         <Text style={styles.textViewBasket}>View basket</Text>
         <Text style={styles.textprice}>{ukupno} kn</Text>
